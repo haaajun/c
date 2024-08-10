@@ -1,0 +1,74 @@
+//#include <stdio.h>
+//int main(){
+//	int n;
+//	scanf("%d",&n);
+//	for(int i = n*-1;i<=n;i++){
+//		printf("%d\n",i);
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n;
+//	scanf("%d",&n);
+//	for(int i=1;i<=n;i+=1){
+//		if(i%3==0){
+//			printf("%d",i);
+//		}
+//	}
+//	return 0;
+//}
+
+//문제 3번
+//#include <stdio.h>
+//int main() {
+//	int n;
+//	int a,b;
+//	scanf("%d",&n);
+//	scanf("%d %d",&a,&b);
+//	if(n%a==0&&n%b==0){
+//		printf("1");
+//	}
+//	else{
+//		printf("0");
+//	}
+//}
+
+//문제 4번
+//#include <stdio.h>
+//int main() {
+//	int count = 0;
+//	for(int i=1;i<=1000;i++){
+//		if(i%3==0){
+//			count+=i*-1;
+//		printf("%d ",i*-1);
+//	}
+//	else if(i%3!=0){
+//		count+=i;
+//		printf("%d ",i);
+//	}
+// }
+// printf("\n%d",count);
+//}
+
+//문제 5번
+#include <stdio.h>
+int main() {
+	int sum,min=100,input;
+	for(int i=0;i<=3;i++){
+       scanf("%d",&input);
+        if(input %2 !=0){
+       	sum += input;
+       		if(min>input){
+    		min=input;
+	   	}
+       }
+	}
+	if(min==100){ //sum == 0
+	printf("-1");
+}
+else{
+	printf("%d\n",sum);
+	printf("%d\n",min);
+} 
