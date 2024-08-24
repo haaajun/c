@@ -1,0 +1,182 @@
+//#include <stdio.h>
+//int main() {
+//	int n;
+//	
+//	n=2;
+//	switch (n){
+//	case 0:
+//		printf("영입니다.");
+//		break;
+//	case 1:
+//		printf("일입니다.");
+//		break;
+//	case 2:
+//		printf("이입니다.");
+//		break;
+//	case 3:
+//		printf("삼입니다.");
+//		break;	
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n;
+//	scanf("%d",&n);
+//	
+//	switch(n%3) {
+//		case 0:
+//			printf("3의 배수이다.");
+//			break;
+//		default:
+//			printf("3의 배수가 아니다.");
+//			break;
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n;
+//	scanf("%d",&n);
+//	
+//	switch(n/10){
+//		case 0:
+//			printf("유소년");
+//			break;
+//		case 1:
+//			printf("청소년");
+//			break;
+//		case 2:
+//			printf("청년");
+//			break;
+//		case 3:
+//			printf("청년");
+//			break;
+//		case 4:
+//			printf("중년");
+//			break;
+//		case 5:
+//			printf("중년");
+//			break;
+//	}
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int k,e,m,s;
+//	scanf("%d %d %d %d",&k,&e,&m,&s);
+//	
+//	switch((k+e+m+s)/40){
+//		case 10:
+//			printf("참 잘했어요");
+//			break;
+//		case 9:
+//			printf("참 잘했어요");
+//			break;
+//		case 8:
+//			printf("잘했어요");
+//			break;
+//		case 7:
+//			printf("화이팅");
+//			break;
+//		default:
+//			printf("힘내요,할 수 있어요");
+//			break;
+//    }
+//    return 0;
+//} 
+
+//#include <stdio.h>
+//int main() {
+//	int k,e,m,s;
+//	int avg;
+//	scanf("%d %d %d %d",&k,&e,&m,&s);
+//	avg =(k+e+m+s)/4;
+//	if(avg/10>=9){
+//		printf("참 잘했어요");
+//	}
+//	else if(avg/10==8){
+//		printf("잘했어요");
+//	}
+//	else if(avg/10==7){
+//		printf("화이팅");
+//	}
+//	else{
+//		printf("힘내요, 할 수 있어요");
+//	}
+//	return 0; 
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int sum=0,sum2=0;
+//	for(int i=1;i<=10;i++){
+//		if(i%2==0) {
+//			sum2+=i;
+//		}
+//		else if(i%2!=0){
+//			sum+=i;
+//		}
+//	}
+//	printf("짝수:%d",sum2);
+//	printf("홀수:%d",sum);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n=0;
+//	scanf("%d",&n);
+//	for(int i=1;i<=n;i++){
+//		if(n%i==0) {
+//		printf("%d ",i);
+//	}
+//  }
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n,max=0;
+//	for(int i=1;i<=10;i++){
+//		scanf("%d",&n);
+//		if(max<n){
+//			max = n;
+//		}
+//	}
+//	printf("최대:%d",max);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n,cnt=0,sum=0;
+//	scanf("%d",&n);
+//	for(int i=1;i<=n;i++){
+//		if(n%i==0){
+//			printf("%d ",i);
+//			cnt++;
+//			sum+=i;
+//		}
+//	} 	
+//	printf("\n약수의 개수: %d\n",cnt);
+//	printf("약수들의 합: %d",sum);
+//}
+
+#include <stdio.h>
+int main() {
+	int a,b;
+	int cnt,sum=0;
+	scanf("%d %d",&a,&b);
+	for(int i=1;i<=a;i++){
+		if(i%b==0){
+			printf("%d ",i);
+			cnt++;
+			sum+=i;
+		}
+	}
+	printf("\n배수의 개수:%d\n",cnt);
+	printf("배수들의 합: %d",sum);
+}
