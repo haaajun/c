@@ -1,0 +1,95 @@
+//#include <stdio.h>
+//int main() {
+//	double height[4];
+//	int j=2;
+//	
+//	height[0]=145.7;
+//	height[1]=156.3;
+//	height[j]=147.89;
+//	j++;
+//	height[j]=159.4;
+//	
+//	printf("%lf\n",height[1]);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int ar[10] = {10,20,30,40,50,60,70,80,90,100};
+//	int br[10];
+//	
+//	for(int i=0;i<=9;i++){
+//		br[i]=ar[i];
+//		printf("%d",br[i]);
+//	}
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int ar[10] ={5,2,1,5,6,7,8,9,4,2};
+//	int min=1000,index=0;
+//	for(int i=0;i<=9;i++){
+//		if(min>ar[i]){
+//			min=ar[i];
+//			index=i;
+//		}
+//	}
+//	printf("min : %d \n",min);
+//	printf("index : %d",index);                   
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int ar[101];
+//	int n;
+//	scanf("%d",&n);
+//	
+//	for(int i=0;i<n;i++){
+//		scanf("%d",&ar[i]);
+//	}
+//	
+//	int x;
+//	scanf("%d",&x);
+//	int cnt=0;
+//	
+//	for(int i=0;i<n;i++){
+//		if(ar[i]==x){
+//			cnt++;
+//		}
+//	}
+//	printf("%d",cnt);
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int n,x;
+//	int arg[10001];
+//	scanf("%d %d\n",&n,&x);
+//	for(int i=0;i<n;i++){
+//	scanf("%d",&arg[i]);
+//	if(arg[i]<x){
+//		printf("%d ",arg[i]); 
+//		}	
+//	}
+//}
+
+#include <stdio.h>
+int main() {
+	int n;
+	int arg[1000];
+	int min=1000,max=0;
+	scanf("%d",&n);
+	for(int i=0;i<n;i++){
+		scanf("%d",&arg[i]);
+		if(arg[i]<min){
+			min=arg[i];
+		}
+		if(arg[i]>max){
+			max=arg[i];
+		}
+	}
+	printf("%d\n",min);
+	printf("%d",max);
+}
