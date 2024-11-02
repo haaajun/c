@@ -1,0 +1,135 @@
+//#include <stdio.h>
+//
+//int main() {
+//	int a,b;
+//	a = 12;
+//	b = 20;
+//	printf("a = %d, b = %d \n",a,b);
+//	
+//	{
+//		int a,c;
+//		a = 30;
+//		c = 50;
+//		printf("a = %d, b = %d, c = %d\n",a,b,c);
+//		
+//		a = 90;
+//		b = 45;
+//		c = 75;
+//	}
+//	
+//	printf("a = %d, b = %d \n",a,b);
+//	
+//	return 0;
+//	
+//}
+
+//#include <stdio.h>
+//
+//void PrintFun1(int m,int n);
+//void PrintFun2(int m,int n);
+//
+//int main(){
+//	int m,n;
+//	
+//	m = 10;
+//	n = 30;
+//	
+//	printf("main before : m = %d n = %d\n",m,n);
+//	PrintFun1(m,n);
+//	printf("main after : m = %d n = %d\n",m,n);
+//	
+//	return 0;
+//}
+//
+//void PrintFun1(int m,int n){
+//	printf("fun1 before : m = %d n = %d\n",m,n);
+//	m = m + 50;
+//	n = n * 10;
+//	PrintFun2(m,n);
+//	printf("fun1 after : m = %d n = %d\n",m,n);
+//}
+//
+//void PrintFun2(int m,int n){
+//	printf("fun2 before : m = %d n = %d\n",m,n);
+//	m = m + 50;
+//	n = n * 10;
+//	printf("fun2 after : m = %d n = %d\n",m,n);
+//}
+
+//#include <stdio.h>
+//
+//int DigitNumber(int n){
+//	int cnt;
+//	while(n > 0){
+//		cnt++;
+//		n/=10;
+//	}
+//	return cnt; 
+//}
+//
+//int main() {
+//	int n;
+//	scanf("%d",&n);
+//	printf("n의 자릿수는 %d자리입니다.",DigitNumber(n));
+//}
+
+//#include <stdio.h>
+//
+//int Divisor(int n){
+//	int sum=0;
+//	for(int i = 1;i<=n;i++){
+//		if(n%i == 0){
+//			printf("%d ",i);
+//			sum+=i;
+//		}
+//	}
+//	return sum;
+//}
+//
+//int main(){
+//	int n;
+//	scanf("%d",&n);
+//	printf("%d",Divisor(n));
+//}
+
+//#include <stdio.h>
+//int multi(int a,int b){
+//	if(a%b==0){
+//		printf("%d는 %d의 배수입니다.",a,b);
+//	}
+//	else{
+//		printf("%d는 %d의 배수가 아닙니다.",a,b);
+//	}
+//}
+//int main() {
+//	int a,b;
+//	scanf("%d %d",&a,&b);
+//	multi(a,b);
+//}
+
+#include <stdio.h>
+int Div(int n){
+	int cnt=0,max=0;
+	int result = 0;
+	for(int i=1;i<=n;i++){
+		int cnt=0;
+		for(int j=1;j<=n;j++){
+			if(i%j==0){
+				cnt++;
+			}
+		}
+		printf("%d의 약수의 개수는 %d개다.\n",i,cnt);
+		if(max<cnt){
+			max=cnt;
+			result = i;
+		}
+		
+	}
+	printf("약수가 가장 많은 수 %d의 약수의 개수: %d ",result,max);
+}
+
+int main(){
+	int n;
+	scanf("%d",&n);
+	Div(n);
+}
