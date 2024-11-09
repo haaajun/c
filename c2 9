@@ -1,0 +1,161 @@
+//#include <stdio.h>
+//
+//int main(){
+//	int n ;
+//	scanf("%d",&n);
+//	printf("%d",n);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main() {
+//	int a, b, c;
+//	
+//	scanf("%d",&a);
+//	printf("a = %d\n",a);
+//	scanf("%d%d",&a,&b);
+//	printf("a = %d b = %d\n",a,b);
+//	scanf("%d%d%d",&a,&b,&c);
+//	printf("a = %d b = %d c = %d\n",a,b,c);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char ch;
+//	
+//	scanf("%c",&ch);
+//	printf("%c %d",ch, ch);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char ch, ca, cr; 
+//	
+//	scanf("%c",&ch);
+//	printf("ch = %c ch = %d\n",ch,ch);
+//	scanf("%c%c",&ch,&ca);
+//	printf("ch = %c ch = %d\n",ch,ch);
+//	printf("ca = %c ca = %d\n",ca,ca);
+//	scanf("%c%c%c",&ch,&ca,&cr);
+//	printf("ch = %c ch = %d\n",ch,ch);
+//	printf("ca = %c ca = %d\n",ca,ca);
+//	printf("cr = %c cr = %d\n",cr,cr);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str[20];
+//	
+//	scanf("%s",str);
+//	printf("%s",str);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <conio.h>
+//
+//int main()
+//{
+//	char ch;
+//	
+//	ch = getche();
+//	printf("\nch=%d : %c\n",ch,ch);
+//	putchar(ch);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <conio.h>
+//
+//int main()
+//{
+//	int n = 0;
+//	
+//	while(1)
+//	{
+//		printf("%d%c",n,13);
+//		n++;
+//	}
+//	
+//	return 0;
+//	
+//}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	int ai;
+	int player;
+	
+	srand(time(NULL));
+	
+	int aiscore=0; 
+	int playerscore=0;
+	
+	for(int i=0;i<5;i++){
+		int dice = rand()%6+1;
+	
+	ai = rand()%6+1;
+	
+	printf("몇이 나올지 예측하세요:");
+	scanf("%d",&player);
+	printf("");
+	printf("컴퓨터의 예측: %d",ai);
+	printf("\n\n");
+	
+	printf("주사위 : %d\n",dice);	
+	
+	
+	if(dice == player && dice == ai){
+		playerscore++;
+		aiscore++;
+		printf("둘 다 맞췄습니다! 1점 획득!");
+	}
+	else if(dice == player){
+		printf("맞췄습니다! 1점 획득!");
+		playerscore++;
+	}
+	else if(dice == ai){
+		printf("컴퓨터가 맞췄네요 ㅠㅠ");
+		aiscore++;
+	}
+	else{
+		printf("아무도 맞추지 못했습니다."); 
+	}
+	
+	
+	printf("\n\n#### 현재 점수 ####");
+	printf("\n내 스코어 : %d점",playerscore);
+	printf("\n컴퓨터 스코어 : %d점\n\n\n",aiscore);
+	
+	
+}
+	if(playerscore>aiscore){
+		printf("이겼습니다!");
+	}
+	else if(playerscore == aiscore){
+		printf("비겼습니다.");
+	}
+	else{
+		printf("졌습니다.");
+	}
+		
+}
