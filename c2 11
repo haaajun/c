@@ -1,0 +1,112 @@
+//#include <stdio.h>
+//int main()
+//{
+//	char c1 = 'A';
+//	char c2 = 'B';
+//	
+//	printf("%d\n",c1+c2);
+//	printf("%d\n",c1>c2);
+//	printf("%d\n",c1 == 'A');
+//	printf("%d\n",'b'> c2 );
+//	printf("%d\n",'a'> c1 );
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char* sp1 = "c3coding";
+//	char* sp2 = "c3coding";
+//	
+//	printf("%d\n",sp1 == sp2);
+//	printf("%d\n",sp1 == "c3coding");
+//	printf("%d\n",sp2 == "c3coding");
+//	printf("%d\n","c3coding" == "c3coding");
+//	printf("%d\n",sp1 == "C3coding");
+//	
+//	printf("%d %d\n",sp1,"c3coding");
+//	printf("%d %d\n",sp2,"c3coding");
+//}
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	char str1[] = "C3coding";
+//	char str2[10] = "C3coding";
+//	
+//	printf("%d\n",str1 == str2);
+//	printf("%d\n",str1 == "C3coding");
+//	printf("%d\n",str2 == "C3coding");
+//	printf("%d\n","C3coding" == "C3coding");
+//	printf("%d\n",str1 == "c3coding");
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main()
+//{
+//	char *sp = "C3coding";
+//	char str[] = "C3coding";
+//	int res;
+//	
+//	res = strcmp(sp,str);
+//	printf("%d\n",res);
+//	res = strcmp(sp,"C3coding");
+//	printf("%d\n",res);
+//	res = strcmp("C3coding","C3coding");
+//	printf("%d\n",res);
+//	
+//	res = strcmp("test","text");
+//	printf("%d\n",res);
+//	res = strcmp("text","test");
+//	printf("%d\n",res);
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//int main()
+//{
+//	char start[15] = "C3";
+//	char end[15] = "coding";
+//	int len;
+//	
+//	printf("start = %s %d\n",start,strlen(start));
+//	printf("end = %s %d\n",end,strlen(end));
+//	
+//	strcat(start,end);
+//	len = strlen(start);
+//	printf("%s %d\n",start,len);
+//	
+//	return 0;
+//} 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int* p;
+	
+	p = (int*)malloc(sizeof(int) * 5);
+	
+	for(int i = 0;i < 5;i++)
+	{
+		p[i] = i;
+		printf("%d ",p[i]);
+	}
+	printf("\n");
+	
+	for(int i = 0;i < 5;i++)
+	{
+		printf("%d ",*p + i);
+	}
+	
+	free(p);
+}
