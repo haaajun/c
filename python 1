@@ -1,0 +1,81 @@
+##a = 1 + 2
+##b = 3 + 4
+##print(a)
+##print(b)
+
+##print('hello',end ="@")
+##print('world')
+
+##print("안녕하세요","반가워요",sep = '=')
+
+##print("출력\n할거")
+
+##print("양하준")
+
+##print("내 이름은 홍길동이고",end = ' ,')
+##print("생일은 5월입니다.")
+##
+##print("홍","길","동",sep = '.')
+
+
+##input()
+##input("이름 : ")
+
+
+##name = input("이름 : ")
+##print(name+"입니다.")
+##
+##print(input("이름 : "))
+##
+##print(input())
+##
+##print(input("what is your favorite fruits? "))
+
+##print("\"\'습관\'보다\n\t강한 것은 없다.\"")
+##
+##print("나는 홍길동이야\r 안녕")
+##
+##print("\\")
+
+##import turtle
+##turtle.shape("classic")
+##
+##turtle.circle(10,extent = 360,steps = 6)
+##
+##done()
+
+##import turtle
+##turtle.shape("turtle")
+####turtle.circle(50,steps = 6)
+##turtle.write("welcome to python world!",move = True)
+##turtle.done()
+
+##import turtle
+##turtle.shape("turtle")
+##turtle.write("Welcome to Python world!",True,font=("Arial",18,"bold"))
+##turtle.circle(18,210)
+##turtle.done()
+
+
+###1.
+##print(input("이름 : "))
+##print(input("학년 : "))
+##print(input("반 : "))
+###2.
+##print("A\nB\nC\nD") ##print("'A','B','C','D'",sep = '\n')
+###3.
+##import turtle
+##turtle.shape("turtle")
+##turtle.write("Welcome to Python World",True,font=("Arial",15,"bold"))
+##turtle.circle(20,extent = 150)
+###4.
+##turtle.circle(100,steps = 6)
+##
+##turtle.done()
+
+import turtle
+turtle.shape("turtle")
+turtle.circle(100)
+turtle.circle(150)
+turtle.circle(200)
+turtle.done()
