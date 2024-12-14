@@ -1,0 +1,125 @@
+##a=2
+##a=6
+##a=10
+##a=9
+##print(a)
+##
+##count = 0
+##name = "홍길동"
+##score = 10.8
+##female = True
+##
+##print("%d은 정수이다"%7)
+##
+##print("현재 a 는 %d입니다."%a)
+##
+##print("오늘은 %d월 %d일 입니다."%(12,14))
+##
+##pi = 3.141592653
+##print("%.2f"%pi)
+##print("%.5f"%pi)
+##
+##print("%-10s"% "hello")
+##print("%10.2f"%pi)
+
+
+##name = "홍길동"
+##birth = 2024
+##age = 13
+##print("내 이름은 {0}이고 {1}년에 태어났다.나이는 {2}살".format(name,birth,age))
+##
+##print(f"내이름은{name}이야.{birth}년에 태어났어.나이는 {age}살.")
+##
+##mean = 96.12345
+##print(f"우리반 시험 평균은{mean:.2f}점이다.")
+##
+##
+##a,b,c,d = 1,2,3,4
+
+##print(130*2%25)
+##print((5 + 2) ** (123 - 120))
+##
+##name = input("이름 : ")
+##print("이름 : %s"%name)
+##print("이름 : {0}".format(name))
+##print(f"이름 : {name}")
+
+##a = int(input())
+##b = int(input())
+##
+##print(f"{a} % {b} == {a % b}")
+##print(f"{a} ** {b} == {a ** b}")
+
+##a = int(input())
+##b = int(input())
+##c = int(input())
+##
+##print(f"세 정수의 평균은{(a + b + c)/3:0.2f}입니다.")
+
+##n = int(input())
+##i = 1
+##print(n*i,end = ' ')
+##i += 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+##i = i + 1
+##print(n*i,end = ' ')
+
+##L = int(input("L 판매 개수 : "))
+##M = int(input("M 판매 개수 : "))
+##S = int(input("S 판매 개수 : "))
+##
+##sum = 2500 * L + 1000 * M + 500 * S
+##print(f"오늘의 총 매출은 {sum}원 입니다.")
+
+##height = int(input("height : "))
+##width = int(input("width : "))
+##print(f"area : {height * width /2:0.1f}")
+##
+##inch = int(input("inch : "))
+##print(f"{inch * 2.54:0.2f}cm")
+##
+##a = int(input("a : "))
+##b = int(input("b : "))
+##print(f"{a**b}")
+##
+##c = int(input())
+##d = int(input())
+##print(f"{c} - {d} = {c-d}")
+##print(f"{c} * {d} = {c*d}")
+##print(f"{c} / {d} = {c/d}:0.2f")
+##print(f"{c} // {d} = {c//d}")
+##print(f"{c} % {d} = {c%d}")
+
+##a = 24000
+##print(f"지난달 남은 돈은?(잔액) {a}")
+##b = int(input("이번 달 수입?"))
+##c = int(input("이번 달 지출?"))
+##print(f"이번달 잔액은? {a + b - c}")
+
+
+a = int(input("a : "))
+b = int(input("b : "))
+key = int(input("key : "))
+if key == 1:
+    print(f"{a} + {b} = {a+b}")
+elif key == 2:
+    print(f"{a} - {b} = {a-b}")
+elif key == 3:
+    print(f"{a} * {b} = {a*b}")
+elif key == 4:
+    print(f"{a} / {b} = {a/b}")
+else :
+    print("1에서 4 사이로 입력해주세요.")
+
