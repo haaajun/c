@@ -1,0 +1,155 @@
+##x = 10
+##y = 12
+##x == y
+##False
+
+##x > t
+##x > y
+##False
+
+##x < y
+##True
+
+##print("x와 y는 같다:",x == y)
+##x와 y는 같다: False
+##print("x와 y는 같지 않다",x != y)
+##x와 y는 같지 않다 True
+
+##x = True
+##y = False
+##print(x and y)
+##print(x or y)
+##print(not y)
+# () [] [] " -> 비어있으면 false
+# float, int -> 0이면 false
+
+##score = int(input("score : "))
+####if score >= 60 and score <= 100 :
+####    print("Pass")
+####else :
+####    print("Fail")
+##if score >= 90 and score <= 100 : 
+##    print("A")
+##elif score >= 80:
+##    print("B")
+##elif score >= 70:
+##    print("C")
+##elif score >= 0:
+##    print("F")
+##else :
+##    print("잘못 입력하셨습니다.")
+
+##a = int(input())
+##b = int(input())
+##c = int(input())
+##print(a >= 140 and b >= 140 and c>= 140)
+
+##a = int(input())
+##if a % 2 == 0 :
+##    print("EVEN")
+##else :
+##    print("ODD")
+
+##y = int(input("year : "))
+##
+##if (y % 4 == 0 and y % 100 != 0) or y % 400 == 0:
+##    print('leap year')
+##else :
+##    print('common year')
+
+##l = [1,2,3]
+##x = 4
+##if x in l :
+##    print("x in l")
+##else:
+##    print("x not in l")
+
+##gender = input("성별 : ")
+##if gender == 'M' :
+##    print("MAN")
+##elif gender == 'W' :
+##    print("WOMAN")
+##else :
+##    print("WHAT?")
+
+##month = int(input())
+##if 1<= month <=6 :
+##    print('first half')
+##else :
+##    print('second half')
+
+##import random
+##l = {1 :'ODD',2 : 'EVEN'}
+##
+##com = random.randint(1,2)
+##user = int(input("odd : 1, even : 2\n"))
+##
+##print('COM(%s) : USER (%s)' %(l[com],l[user]))
+##if com == user:
+##    print('correct')
+##else :
+##    print('Incorrect')
+
+##import random
+##l = {1 :'가위',2 : '바위',3 : '보'}
+##com = random.randint(1,3)
+##user = int(input("1 : 가위, 2 : 바위, 3 : 보, : "))
+##print('Com(%s) : User (%s)' %(l[com],l[user]))
+##if com == user :
+##    print("draw")
+##elif com == 1 and user == 2:
+##    print('win!')
+##elif com == 1 and user == 3:
+##    print('Com wins')
+##elif com == 2 and user == 1 :
+##    print('Com wins')
+##elif com == 2 and user == 3 :
+##    print('win!')
+##elif com == 3 and user == 1 :
+##    print('win!')
+##elif com == 3 and user == 2 :
+##    print('Com wins')
+
+##import turtle
+##t = turtle.Turtle('turtle')
+##t.penup()
+##t.setx(200)
+##t.write('동',font=('Arial',30))
+##t.setx(-200)
+##t.write('서',font=('Arial',30))
+##t.setx(0)
+##t.sety(-200)
+##t.write('남',font=('Arial',30))
+##t.sety(200)
+##t.write('북',font = ('Arial',30))
+##t.goto(0,0)
+##t.pendown()
+##t.pencolor('blue')
+##a = turtle.textinput('','방향을 입력해 주세요.')
+##
+##if a == '동' :
+##    t.setx(200)
+##elif a == '서' :
+##    t.setx(-200)
+##elif a == '남' :
+##    t.sety(-200)
+##elif a == '북' :
+##    t.sety(200)
+##else :
+##    t.right(360)
+
+import random
+a = random.randint(1,6)
+b = random.randint(1,6)
+print('A(%d) : B(%d)'%(a,b))
+c = random.randint(1,6)
+d = random.randint(1,6)
+print('A(%d) : B(%d)'%(c,d))
+print('A(%d) : B(%d)'%(a+c,b+d))
+
+if a+c == b + d :
+    print("무승부!")
+elif a + c > b + d :
+    print("A 님 승리!")
+else :
+    print("B 님 승리!")
