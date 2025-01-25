@@ -1,0 +1,120 @@
+##from random import choices
+##a = ['a','b','c','d','e','f','g']
+##b = (1,2,3,4,5)
+##c = '월화수목금토일'
+##print(f"리스트: {choices(a,k=3)}")
+##print(f"튜플: {choices(b)}")
+##print(f"문자열: {choices(c)}")
+
+##from random import choice
+##l = [0,1,2,3,4,5]
+##a = choice(l)
+##if a != 0 :
+##    print(f"No.{a} Spot!")
+##else:
+##    print("Loss!")
+
+##import random as rd
+##a = [1,2,3,4,5,6,7,8,9,10]
+##b = rd.choices(a,[2,2,2,2,2,2,1,2,2,2],k = 3)
+##n = b.count(7)
+##if n == 3 :
+##    print("Lucky!")
+##elif n == 2 :
+##    print("Good~")
+##else :
+##    print("So so.")
+
+from random import *
+import turtle
+
+house = turtle.Turtle()
+house.penup()
+house.goto(300,-100)
+house.pendown()
+house.fillcolor("skyblue")
+house.begin_fill()
+house.forward(100)
+house.left(90)
+house.forward(100)
+house.left(90)
+house.forward(100)
+house.left(90)
+house.forward(100)
+house.end_fill()
+
+house.fillcolor("royalblue")
+house.penup()
+house.goto(300,0)
+house.begin_fill()
+house.pendown()
+house.left(150)
+house.forward(100)
+house.right(120)
+house.forward(100)
+house.end_fill() 
+
+line = turtle.Turtle()
+line.penup()
+line.goto(-380,-100)
+line.pendown()
+line.write("0")
+line.forward(340)
+line.write("50")
+line.forward(340)
+line.write("100")
+
+t = turtle.Turtle(shape = "turtle")
+t.penup()
+t.goto(-400,-100)
+t.pendown()
+t.color("purple","pink")
+t.penup()
+
+g = turtle.Turtle()
+g.penup()
+g.sety(100)
+g.pendown()
+g.write("씨큐브 코딩의 타자 게임!",True,font = ("Arial",20,"bold"))
+
+fruit = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew melon", "jackfruit", "kiwi", "lemon", "mango", "nectarine", "orange", "papaya", "quince", "raspberry", "strawberry", "tangerine", "watermelon"]
+score = 0
+n = randint(5,10)
+
+for i in range (n) :
+    s = choice(fruit)
+    fruit.remove(s)
+    word = turtle.textinput("fruit",'%s(%d/%d)' %(s,i+1,n))
+    if s == word :
+        score += 1
+
+rate = score / n * 100
+
+g.penup()
+g.goto(0,50)
+g.pendown()
+g.write("%d/%d번 성공!" %(score,n),True,font = ("Arial",15,"bold"))
+g.penup()
+g.goto(0,0)
+g.pendown()
+g.write("정확도 : %.1f%%" %(rate),True,font=("Arial",15,"bold"))
+
+distance = t.distance(line) / 100 * rate
+t.speed(1)
+t.forward(distance)
+if rate == 100 :
+    t.write("집에 데려다줘서 고마워!!",False,"center",font = ("Arial",15,"bold"))
+    t.left(60)
+    t.right(60)
+    t.left(60)
+    t.right(60)
+elif rate >= 80 :
+    t.write("집이 코앞인데!! 한 번 만 더 시도해줘!!",False,"center",font=("Arial",15,"normal"))
+elif rate >= 50 :
+    t.write("집에 가고 싶어!! ㅠ0ㅠ",False,"center",font =("Arial",15,"normal"))
+else :
+    t.color('black')
+    t.right(360)
+    t.write("거북이가 쓰러졌어요 ㅠ_ㅠ",False,"center",font = ("Arial",15,"normal"))
+
+turtle.done()
