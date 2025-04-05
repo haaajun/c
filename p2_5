@@ -1,0 +1,123 @@
+##f = open("./w5/profile.txt","w")
+##name = input("Name : ")
+##age = input("Age : ")
+##f.write("Name : %s\n" % name)
+##f.write("Age : %s\n" % age)
+##f.close()
+
+##f = open("profile.txt","a")
+##s = input("school : ")
+##f.write("School : %s\n" % s)
+##f.close()
+
+##f = open("profile.txt","r")
+##
+##data = f.read()
+##print(data)
+##f.close()
+
+##f = open("profile.txt","r")
+##while True :
+##    data = f.readline()
+##    if not data : break
+##    print(data,end = "")
+##f.close()
+##f = open("profile.txt","r")
+##data = f.readlines()
+##for line in data :
+##    print(line,end = "")
+##f.close()
+
+##f = open("profile.txt","r")
+##data = f.readlines()
+##print(data[0])
+##f.close()
+
+##f = open("alphabet.txt","r")
+####f.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+##index = int(input("index : "))
+##f.seek(index)
+##print(f.read())
+##f.close()
+
+##from tkinter import *
+##
+##def get_click() :
+##    lbl2['text'] = txt_box.get(1.0,END)
+##
+##def ins_click() :
+##    txt_box.insert(1.0, lbl1['text'])
+##
+##def del_click() :
+##    txt_box.delete(1.0,END)
+##
+##win = Tk()
+##txt_box = Text(win, width = 40, height = 5)
+##lbl1 = Label(win, text = "Click the 'insert' button to insert this string.",
+##width = 40, height = 5,bg = "skyblue")
+##lbl2 = Label(win,text = "Click the 'get' button to import textbox strings\ninto this label.",width = 40,height = 5, bg = "pink")
+##btn_get = Button(win, text = "get", width = 10, command = get_click)
+##btn_ins = Button(win, text = "insert", width = 10, command = ins_click)
+##btn_del = Button(win, text = "delete",width = 10, command = del_click)
+##
+##txt_box.grid(row = 0,column = 0, columnspan = 3)
+##lbl1.grid(row = 1, column = 0, columnspan = 3)
+##lbl2.grid(row = 2 , column = 0, columnspan = 3)
+##btn_get.grid(row = 3, column = 0)
+##btn_ins.grid(row = 3, column = 1)
+##btn_del.grid(row = 3, column = 2)
+##
+##win.mainloop()
+
+
+##f = open("fruit.txt","r")
+##data = f.readlines()
+##for line in data :
+##    line = line.strip()
+##    if len(line) >= 10 :
+##        print(line)
+##f.close()
+
+##f = open("anna.txt","r")
+##data = f.readline()
+##data = data.split()
+##for word in data :
+##    if 'b' in word :
+##        print(word)
+
+from tkinter import *
+from tkinter import messagebox
+
+def save() :
+    data = txt.get(1.0,END)
+
+    file_name = entry.get()
+
+    f = open(file_name,"w")
+    f.write(data)
+    f.close()
+
+    messagebox.showinfo("save","Save Complete")
+
+def clear() :
+    txt.delete(1.0,END)
+
+    entry.delete(0,END)
+
+    ans = messagebox.showinfo("clear","Delete Complete")
+
+win = Tk()
+win.title("My Notepad")
+win.geometry("300x320")
+
+lbl = Label(win,text = "File name : ")
+entry = Entry(win)
+txt = Text(win, height = 20,width = 40)
+btn_save = Button(win,text = "save" ,width = 10,command = save)
+btn_clear = Button(win,text = "clear", width =10,command = clear)
+
+txt.grid(row = 0, column = 0,columnspan = 3)
+lbl.grid(row = 1,column = 0)
+entry.grid(row = 1, column =1)
+btn_save.grid(row = 1, column = 2)
+btn_clear.grid(row = 2, column =2)
